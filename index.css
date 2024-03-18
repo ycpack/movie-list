@@ -1,0 +1,211 @@
+
+html, body {
+     font-family: "Inter", sans-serif;
+  margin: 0px auto;
+  max-width: 650px;
+}
+
+header{
+  background-image: url("https://images.unsplash.com/photo-1628432136678-43ff9be34064?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDF8fHxlbnwwfHx8fHw%3D&w=1000&q=80"); 
+  background-size: cover;
+  height: 208px;
+  }
+  
+h2{
+    font-family: Inter;
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.045em;
+}
+button{
+     padding: 0.8em 2em;
+    border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  background-color: #6d6d6d;
+  
+}
+button:hover{
+     background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 30px;
+    height: 208px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    padding: 0 0 96 50px;
+    text-shadow: 2px 2px black;
+    
+   
+}
+#watchList-page{
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.search-bar{
+    position: relative;
+    top: -20px;
+    display: flex;
+    height: 100%;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 0px;
+   
+    font-weight: 600px;
+
+   
+}
+
+.search-bar input[type=text]{
+     border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 270px;
+    margin-left: -10px;
+    margin-right: -10px;
+    /* color: black; */
+    padding: 0.8em 1.7em;
+    background-color: #343a40;
+    color: white;
+    
+}
+.search-bar input:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}
+
+
+main{
+   height: 100%;
+    background-color: #131515;
+    min-width:300px; 
+}
+
+
+.movie {
+  border-bottom: 1px solid rgb(108, 107, 107);
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 1rem auto auto auto 1rem;
+  grid-template-areas:
+    ". . . . "
+    "poster title title title "
+    "poster runtime genres add-to-watchlist"
+    "poster plot plot plot"
+    ". . . . ";
+  gap: 10px;
+  font-family: Inter;
+  color: white;
+  margin-left: 70px;
+  
+  
+}
+
+.movie:last-child {
+  border-bottom: none;
+}
+
+.movie-poster {
+  grid-area: poster;
+  width: 100px;
+  border: 1px solid snow;
+}
+
+.movie-title {
+    margin-left: 3px;
+  display: flex;
+  grid-area: title;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: justified;
+}
+
+.movie-rating {
+  grid-area: title;
+  margin-left: 10px;
+  margin-top: 18px;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.movie-runtime {
+  margin-left: 10px;
+  margin-top:  -17px;
+  grid-area: runtime;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.movie-genre {
+    margin-left: -60px;
+   
+    margin-top:  -17px;
+  grid-area: genres;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+
+.movie-wishlist {
+   
+    margin-top:  -28px;
+    margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  grid-area: add-to-watchlist;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+}
+.movie-wishlist img {
+    margin-top: 15px;
+  width: 16px;
+  height: 16px;
+}
+.movie-about {
+    margin-left: 10px;
+    margin-top:  -20px;
+  grid-area: plot;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+@media (max-width:400px){
+    body{
+        width: 500px;
+    }
+}
